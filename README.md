@@ -6,6 +6,7 @@
 [![npm version](https://img.shields.io/npm/v/@seneca/graph.svg)](https://npmjs.com/package/@seneca/graph)
 [![build](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-graph/badge.svg)](https://snyk.io/test/github/senecajs/seneca-graph)
+[![Coverage Status](https://coveralls.io/repos/senecajs/seneca-graph/badge.svg?branch=master&service=github)](https://coveralls.io/github/senecajs/seneca-graph?branch=master)
 
 | ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
 |---|---|
@@ -14,7 +15,7 @@
 
 ```sh
 $ npm install seneca-graph
-```
+```js
 
 <!--START:action-list-->
 
@@ -23,7 +24,7 @@ $ npm install seneca-graph
 ```js
 require('seneca')()
   .use('@seneca/graph')
-```
+```js
 
 ## More Examples
 
@@ -443,7 +444,7 @@ Add a directed relation between two nodes in a given graph.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -456,7 +457,7 @@ Add a directed relation between two nodes in a given graph.
     id: 'internal graph node identifier'
   }
 }
-```
+```js
 
 ----------
 ### &laquo; `list:rel,role:graph` &raquo;
@@ -953,7 +954,7 @@ List nodes connected by a given relation.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -971,7 +972,7 @@ List nodes connected by a given relation.
     '...'
   ]
 }
-```
+```js
 
 ----------
 ### &laquo; `role:graph,tree:rel` &raquo;
@@ -1550,7 +1551,7 @@ Load tree of nodes connected by given relation.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1571,7 +1572,7 @@ Load tree of nodes connected by given relation.
     '...connected-nodes...'
   ]
 }
-```
+```js
 
 ----------
 
@@ -1585,7 +1586,7 @@ The [Senecajs org](https://github.com/senecajs/) encourages open participation. 
 
 ```sh
 npm run test
-```
+```js
 
 ## Background
 
