@@ -13,14 +13,14 @@
 
 ## Install
 
-```
+```sh
 $ npm install seneca-graph
 ```
 <!--START:action-list-->
 
 ## Quick Example
 
-```
+```js
 require('seneca')()
   .use('@seneca/graph')
 ```
@@ -442,7 +442,7 @@ Add a directed relation between two nodes in a given graph.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -951,7 +951,7 @@ List nodes connected by a given relation.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1547,7 +1547,7 @@ Load tree of nodes connected by given relation.
 
 #### Replies With
 
-```
+```json
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1579,7 +1579,7 @@ The [Senecajs org](https://github.com/senecajs/) encourages open participation. 
 
 ### Running tests
 
-```
+```sh
 npm run test
 ```
 ## Background
