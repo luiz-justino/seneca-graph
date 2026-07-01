@@ -13,19 +13,17 @@
 
 ## Install
 
-```sh
+```
 $ npm install seneca-graph
-```js
-
+```
 <!--START:action-list-->
 
 ## Quick Example
 
-```js
+```
 require('seneca')()
   .use('@seneca/graph')
-```js
-
+```
 ## More Examples
 
 See [test/](test/) for more usage examples.
@@ -444,7 +442,7 @@ Add a directed relation between two nodes in a given graph.
 
 #### Replies With
 
-```json
+```
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -457,8 +455,7 @@ Add a directed relation between two nodes in a given graph.
     id: 'internal graph node identifier'
   }
 }
-```js
-
+```
 ----------
 ### &laquo; `list:rel,role:graph` &raquo;
 
@@ -954,7 +951,7 @@ List nodes connected by a given relation.
 
 #### Replies With
 
-```json
+```
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -972,8 +969,7 @@ List nodes connected by a given relation.
     '...'
   ]
 }
-```js
-
+```
 ----------
 ### &laquo; `role:graph,tree:rel` &raquo;
 
@@ -1551,7 +1547,7 @@ Load tree of nodes connected by given relation.
 
 #### Replies With
 
-```json
+```
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1572,8 +1568,7 @@ Load tree of nodes connected by given relation.
     '...connected-nodes...'
   ]
 }
-```js
-
+```
 ----------
 
 <!--END:action-desc-->
@@ -1584,10 +1579,9 @@ The [Senecajs org](https://github.com/senecajs/) encourages open participation. 
 
 ### Running tests
 
-```sh
+```
 npm run test
-```js
-
+```
 ## Background
 
 Provides graph data structure operations as Seneca action patterns.
