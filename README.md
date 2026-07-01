@@ -1,53 +1,68 @@
-# seneca-graph
+![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
+> A [Seneca.js](http://senecajs.org) plugin
 
-[![Npm][BadgeNpm]][Npm]
-[![Travis][BadgeTravis]][Travis]
-[![Coveralls][BadgeCoveralls]][Coveralls]
+# @seneca/graph
 
+[![npm version](https://img.shields.io/npm/v/@seneca/graph.svg)](https://npmjs.com/package/@seneca/graph)
+[![build](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-graph/badge.svg)](https://snyk.io/test/github/senecajs/seneca-graph)
+[![Coverage Status](https://coveralls.io/repos/senecajs/seneca-graph/badge.svg?branch=master&service=github)](https://coveralls.io/github/senecajs/seneca-graph?branch=master)
 
-A [Seneca](senecajs.org) plugin that provides basic graph operations.
-
+| ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
+|---|---|
 
 ## Install
 
 ```sh
 $ npm install seneca-graph
 ```
-
-
-
 <!--START:action-list-->
 
+## Quick Example
 
-## Action Patterns
+```js
+require('seneca')()
+  .use('@seneca/graph')
+```
+## More Examples
+
+See [test/](test/) for more usage examples.
+
+## Motivation
+
+Graph data structure plugin for Seneca microservices.
+
+## Support
+
+If you're using this module and need help, you can:
+
+- Post a [github issue](https://github.com/senecajs/seneca-graph/issues)
+- Tweet to [@senecajs](http://twitter.com/senecajs)
+- Ask on the [Gitter](https://gitter.im/senecajs/seneca)
+
+## API
+
+### Action Patterns
 
 * [add:rel,role:graph](#-addrelrolegraph-)
 * [list:rel,role:graph](#-listrelrolegraph-)
 * [role:graph,tree:rel](#-rolegraphtreerel-)
 
-
 <!--END:action-list-->
 
 <!--START:action-desc-->
 
-
-## Action Descriptions
+### Action Descriptions
 
 ### &laquo; `add:rel,role:graph` &raquo;
 
 Add a directed relation between two nodes in a given graph.
 
-
-
-
 #### Examples
-
-
 
 * `add:rel,role:graph,graph:number,rel:lessthan,add:rel,from:<from-id>,to:<to-id>`
   * Idempotently add a pair of nodes to  _number_ graph connected by directed relation _lessthan_ with `from-id` and `to-id` referencing external entity identifiers as per graph definition in options.
 #### Parameters
-
 
 * _graph_ : { type: 'string',
   '$_root':
@@ -425,13 +440,9 @@ Add a directed relation between two nodes in a given graph.
      replacements: null },
   '$_super': {} }
 
-
-
-
 #### Replies With
 
-
-```
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -445,19 +456,12 @@ Add a directed relation between two nodes in a given graph.
   }
 }
 ```
-
-
 ----------
 ### &laquo; `list:rel,role:graph` &raquo;
 
 List nodes connected by a given relation.
 
-
-
-
 #### Examples
-
-
 
 * `list:rel,role:graph,graph:number,rel:lessthan,list:rel`
   * List all nodes in  _number_ graph connected by directed relation _lessthan_
@@ -474,7 +478,6 @@ List nodes connected by a given relation.
 * `list:rel,role:graph,graph:number,rel:lessthan,list:rel,entity:to`
   * List all nodes in  _number_ graph connected by directed relation _lessthan_, loading and including referenced to-side entities
 #### Parameters
-
 
 * _graph_ : { type: 'string',
   '$_root':
@@ -946,13 +949,9 @@ List nodes connected by a given relation.
      replacements: null },
   '$_super': {} }
 
-
-
-
 #### Replies With
 
-
-```
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -971,19 +970,12 @@ List nodes connected by a given relation.
   ]
 }
 ```
-
-
 ----------
 ### &laquo; `role:graph,tree:rel` &raquo;
 
 Load tree of nodes connected by given relation.
 
-
-
-
 #### Examples
-
-
 
 * `role:graph,tree:rel,graph:number,rel:lessthan,from:<from-id>`
   * Load tree of nodes from _number_ graph connected by directed relation _lessthan_ with `from-id` nodes at first level, to default depth of 1.
@@ -991,7 +983,6 @@ Load tree of nodes connected by given relation.
 * `role:graph,tree:rel,graph:number,rel:lessthan,from:<from-id>,depth:2,entity:to`
   * Load tree of nodes from _number_ graph connected by directed relation _lessthan_ with `from-id` nodes at first level, to depth 2, loading and returning referenced to-side entities.
 #### Parameters
-
 
 * _graph_ : { type: 'string',
   '$_root':
@@ -1554,13 +1545,9 @@ Load tree of nodes connected by given relation.
      replacements: null },
   '$_super': {} }
 
-
-
-
 #### Replies With
 
-
-```
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1582,17 +1569,19 @@ Load tree of nodes connected by given relation.
   ]
 }
 ```
-
-
 ----------
-
 
 <!--END:action-desc-->
 
+## Contributing
 
-[BadgeCoveralls]: https://coveralls.io/repos/senecajs/seneca-graph/badge.svg?branch=master&service=github
-[BadgeNpm]: https://badge.fury.io/js/%40seneca%2Fgraph.svg
-[BadgeTravis]: https://travis-ci.org/senecajs/seneca-graph.svg?branch=master
-[Coveralls]: https://coveralls.io/github/senecajs/seneca-graph?branch=master
-[Npm]: https://www.npmjs.com/package/@seneca/graph
-[Travis]: https://travis-ci.org/senecajs/seneca-graph?branch=master
+The [Senecajs org](https://github.com/senecajs/) encourages open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
+
+### Running tests
+
+```sh
+npm run test
+```
+## Background
+
+Provides graph data structure operations as Seneca action patterns.
