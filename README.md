@@ -1,12 +1,17 @@
-# seneca-graph
+![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
+> A [Seneca.js](http://senecajs.org) plugin
 
+# @seneca/graph
+
+[![npm version](https://img.shields.io/npm/v/@seneca/graph.svg)](https://npmjs.com/package/@seneca/graph)
+[![build](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-graph/actions/workflows/build.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-graph/badge.svg)](https://snyk.io/test/github/senecajs/seneca-graph)
 [![Npm][BadgeNpm]][Npm]
 [![Travis][BadgeTravis]][Travis]
 [![Coveralls][BadgeCoveralls]][Coveralls]
 
-
-A [Seneca](senecajs.org) plugin that provides basic graph operations.
-
+| ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
+|---|---|
 
 ## Install
 
@@ -18,8 +23,32 @@ $ npm install seneca-graph
 
 <!--START:action-list-->
 
+## Quick Example
 
-## Action Patterns
+```js
+require('seneca')()
+  .use('@seneca/graph')
+```
+
+## More Examples
+
+See [test/](test/) for more usage examples.
+
+## Motivation
+
+Graph data structure plugin for Seneca microservices.
+
+## Support
+
+If you're using this module and need help, you can:
+
+- Post a [github issue](https://github.com/senecajs/seneca-graph/issues)
+- Tweet to [@senecajs](http://twitter.com/senecajs)
+- Ask on the [Gitter](https://gitter.im/senecajs/seneca)
+
+## API
+
+### Action Patterns
 
 * [add:rel,role:graph](#-addrelrolegraph-)
 * [list:rel,role:graph](#-listrelrolegraph-)
@@ -30,8 +59,7 @@ $ npm install seneca-graph
 
 <!--START:action-desc-->
 
-
-## Action Descriptions
+### Action Descriptions
 
 ### &laquo; `add:rel,role:graph` &raquo;
 
@@ -1596,3 +1624,17 @@ Load tree of nodes connected by given relation.
 [Coveralls]: https://coveralls.io/github/senecajs/seneca-graph?branch=master
 [Npm]: https://www.npmjs.com/package/@seneca/graph
 [Travis]: https://travis-ci.org/senecajs/seneca-graph?branch=master
+
+## Contributing
+
+The [Senecajs org](https://github.com/senecajs/) encourages open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
+
+### Running tests
+
+```sh
+npm run test
+```
+
+## Background
+
+Provides graph data structure operations as Seneca action patterns.
