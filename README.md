@@ -442,7 +442,7 @@ Add a directed relation between two nodes in a given graph.
 
 #### Replies With
 
-```json
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -951,7 +951,7 @@ List nodes connected by a given relation.
 
 #### Replies With
 
-```json
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
@@ -1547,7 +1547,7 @@ Load tree of nodes connected by given relation.
 
 #### Replies With
 
-```json
+```js
 {
   from: '_from_ parameter, as provided',
   to: '_to_ parameter, as provided',
